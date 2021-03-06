@@ -4,6 +4,18 @@ const constraints = {
     },
     lastname: {
         presence: true,
+    },
+    email:{
+        presence: true,
+    },
+    phone: {
+        presence: true,
+    },
+    address: {
+        presence: true,
+    },
+    country: {
+        presence: true,
     }
 }
 
@@ -12,6 +24,10 @@ const app = Vue.createApp({
         return {
             firstname: null,
             lastname: null,
+            country: null,
+            address: null,
+            phone: null,
+            email: null,
             errors: null,
         }
     },
@@ -20,13 +36,17 @@ const app = Vue.createApp({
         checkForm(e) {
             this.errors = validate({
                     firstname: this.firstname,
-                    lastname: this.lastname
+                    lastname: this.lastname,
+                    email: this.email,
+                    phone: this.phone,
+                    country: this.country,
+                    address: this.address,
                 },
                 constraints)
             if (this.errors) {
                 e.preventDefault();
             }else{
-                alert("yayyy")
+                alert("Pls")
             }
         }
     }
