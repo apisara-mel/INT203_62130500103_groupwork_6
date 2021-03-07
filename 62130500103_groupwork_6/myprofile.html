@@ -27,69 +27,67 @@
 
 </head>
 
-<body>
+<body style="background-color: #a8dadc;">
 
-    <div class="padding" id="app">
+    <div class="justify-center my-12 flex" id="app">
         <form @submit="checkForm">
 
-            <div class="my-8">
-                <div class="text-center m-4 ">
-                    <p v-if="errors" class="text-red-500">
-                        <b>Please correct the following error(s):</b>
-                        <ul>
-                            <li style="list-style: none" v-for="error in errors" class="text-red-500">{{ error }}
-                            </li>
-                        </ul>
-                    </p>
+            <div class="justify-center flex">
+                <img src="images/S__6070488.jpg" class="rounded-full h-40 w-40 ">
+            </div>
 
-                    <div class="justify-center" style="align-items: center;">
-                        <div class="h-40 w-40 justify-center flex item-stretch"> 
-                            <img src="images/S__6070488.jpg" >
-                        </div>
+            <div class="my-12 justify-center flex">
+                <p v-if="errors" class="text-red-500">
+                    <b>Please correct the following error(s):</b>
+                    <ul>
+                        <li style="list-style: none" v-for="error in errors" class="text-red-500">{{ error }}
+                        </li>
+                    </ul>
+                </p>
 
-                        <div class="justify-start text-2xl">
-                            <h1>My Profile</h1><br>
-                        </div>
-  
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex flex-col">
-                                <label for="firstname" class="text-sm leading-7 text-gray-600">First Name</label>
-                                <input type="text" id="firstname" v-model="firstname" name="firstname"
-                                    class="bg-gray-100 rounded px-4 py-2 mb-4 ml-4">
-                            </div>
-                            <div class="flex flex-col">
-                                <label for="lastname" class="text-sm leading-7 text-gray-600">Last Name</label>
-                                <input type="text" id="lastname" v-model="lastname" name="lastname"
-                                    class="bg-gray-100 rounded px-4 py-2 mb-4 ml-4">
-                            </div>
-                            <div class="flex flex-col">
-                                <label for="email" class="text-sm leading-7 text-gray-600">Email</label>
-                                <input type="text" id="email" v-model="email" name="email"
-                                    class="bg-gray-100 rounded px-4 py-2 mb-4 ml-4">
-                            </div>
-                            <div class="flex flex-col">
-                                <label for="phone" class="text-sm leading-7 text-gray-600">Phone Number</label>
-                                <input type="text" id="phone" v-model="phone" name="phone"
-                                    class="bg-gray-100 rounded px-4 py-2 mb-4 ml-4">
-                            </div>
-                            <div class="flex flex-col">
-                                <label for="address" class="text-sm leading-7 text-gray-600">Address</label>
-                                <input type="text" id="address" v-model="address" name="address"
-                                    class="bg-gray-100 rounded px-4 py-2 mb-4 ml-4">
-                            </div>
-                            <div class="flex flex-col">
-                                <label for="country" class="text-sm leading-7 text-gray-600">Country</label>
-                                <input type="text" id="country" v-model="country" name="country"
-                                    class="bg-gray-100 rounded px-4 py-2 mb-4 ml-4">
-                            </div>
-                        </div>
-
-                        <div>
-                            <input type="submit" value="Submit"
-                                class="px-8 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600 ">
-                        </div>
-
+                <div class="justify-center">
+                    <div class="text-center text-2xl">
+                        <h1>My Profile</h1><br>
                     </div>
+
+                    <div class="grid grid-cols-2 gap-x-8">
+                        <div class="flex flex-col">
+                            <label for="firstname" class="text-sm leading-7 text-gray-600">First Name</label>
+                            <input type="text" id="firstname" v-model="firstname" name="firstname"
+                                class="bg-gray-100 rounded px-4 py-2 mb-4 ">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="lastname" class="text-sm leading-7 text-gray-600">Last Name</label>
+                            <input type="text" id="lastname" v-model="lastname" name="lastname"
+                                class="bg-gray-100 rounded px-4 py-2 mb-4">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="email" class="text-sm leading-7 text-gray-600">Email</label>
+                            <input type="text" id="email" v-model="email" name="email"
+                                class="bg-gray-100 rounded px-4 py-2 mb-4">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="phone" class="text-sm leading-7 text-gray-600">Phone Number</label>
+                            <input type="text" id="phone" v-model="phone" name="phone"
+                                class="bg-gray-100 rounded px-4 py-2 mb-4">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="address" class="text-sm leading-7 text-gray-600">Address</label>
+                            <input type="text" id="address" v-model="address" name="address"
+                                class="bg-gray-100 rounded px-4 py-2 mb-4">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="country" class="text-sm leading-7 text-gray-600">Country</label>
+                            <input type="text" id="country" v-model="country" name="country"
+                                class="bg-gray-100 rounded px-4 py-2 mb-4">
+                        </div>
+                    </div>
+
+                    <div class="justify-center flex">
+                        <input type="submit" value="Submit"
+                            class="px-8 py-2 text-white rounded-lg hover:bg-red-400 bg-red-300">
+                    </div>
+
                 </div>
             </div>
     </div>
